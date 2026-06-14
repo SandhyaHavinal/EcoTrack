@@ -146,6 +146,19 @@ Administrative features:
 * Node.js 18+
 * npm
 * TypeScript
+* Vitest (Test Runner)
+* React Testing Library (DOM Testing)
+
+---
+
+## 🧪 Testing
+
+The codebase features 38 automated unit and React component tests validating both carbon emission engines and React UI workflows.
+
+To run the test suite locally:
+```bash
+npm run test
+```
 
 ---
 
