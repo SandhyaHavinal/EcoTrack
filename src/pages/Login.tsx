@@ -110,10 +110,11 @@ const Login: React.FC = () => {
             
             {isSignUp && (
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-slate-300 uppercase tracking-wider pl-1">Full Name</label>
+                <label htmlFor="name-input" className="text-xs font-semibold text-slate-300 uppercase tracking-wider pl-1">Full Name</label>
                 <div className="relative">
                   <User className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                   <input
+                    id="name-input"
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -126,10 +127,11 @@ const Login: React.FC = () => {
             )}
 
             <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-300 uppercase tracking-wider pl-1">Email Address</label>
+              <label htmlFor="email-input" className="text-xs font-semibold text-slate-300 uppercase tracking-wider pl-1">Email Address</label>
               <div className="relative">
                 <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                 <input
+                  id="email-input"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -142,10 +144,11 @@ const Login: React.FC = () => {
             </div>
 
             <div className="space-y-1.5">
-              <label className="text-xs font-semibold text-slate-300 uppercase tracking-wider pl-1">Password</label>
+              <label htmlFor="password-input" className="text-xs font-semibold text-slate-300 uppercase tracking-wider pl-1">Password</label>
               <div className="relative">
                 <Lock className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                 <input
+                  id="password-input"
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}

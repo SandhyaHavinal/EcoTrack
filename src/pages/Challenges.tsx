@@ -155,8 +155,9 @@ const Challenges: React.FC = () => {
           {addingGoal && (
             <form onSubmit={handleAddGoal} className="p-4 rounded-2xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-400 uppercase tracking-wide">Category</label>
+                <label htmlFor="goal-category" className="text-xs font-bold text-slate-400 uppercase tracking-wide">Category</label>
                 <select
+                  id="goal-category"
                   value={goalCategory}
                   onChange={(e) => setGoalCategory(e.target.value as any)}
                   className="w-full glass-input py-2 px-3 text-xs"
@@ -170,8 +171,9 @@ const Challenges: React.FC = () => {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-400 uppercase tracking-wide">Reduction Target (kg)</label>
+                <label htmlFor="goal-target" className="text-xs font-bold text-slate-400 uppercase tracking-wide">Reduction Target (kg)</label>
                 <input
+                  id="goal-target"
                   type="number"
                   min="1"
                   value={goalTarget}
@@ -182,8 +184,9 @@ const Challenges: React.FC = () => {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-400 uppercase tracking-wide">Deadline</label>
+                <label htmlFor="goal-deadline" className="text-xs font-bold text-slate-400 uppercase tracking-wide">Deadline</label>
                 <input
+                  id="goal-deadline"
                   type="date"
                   value={goalDeadline}
                   onChange={(e) => setGoalDeadline(e.target.value)}

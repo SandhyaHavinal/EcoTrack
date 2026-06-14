@@ -91,10 +91,11 @@ const TravelTracker: React.FC = () => {
 
             <form onSubmit={handleCalculateRoute} className="space-y-4">
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-400 uppercase tracking-wide">Starting Location</label>
+                <label htmlFor="origin-input" className="text-xs font-bold text-slate-400 uppercase tracking-wide">Starting Location</label>
                 <div className="relative">
                   <MapPin className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-emerald-500" />
                   <input
+                    id="origin-input"
                     type="text"
                     value={origin}
                     onChange={(e) => setOrigin(e.target.value)}
@@ -106,10 +107,11 @@ const TravelTracker: React.FC = () => {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-bold text-slate-400 uppercase tracking-wide">Destination</label>
+                <label htmlFor="destination-input" className="text-xs font-bold text-slate-400 uppercase tracking-wide">Destination</label>
                 <div className="relative">
                   <MapPin className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-rose-500" />
                   <input
+                    id="destination-input"
                     type="text"
                     value={destination}
                     onChange={(e) => setDestination(e.target.value)}

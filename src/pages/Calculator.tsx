@@ -199,10 +199,11 @@ const Calculator: React.FC = () => {
               {transportMode !== 'walk_bike' && (
                 <div className="space-y-3 pt-4">
                   <div className="flex justify-between items-center">
-                    <label className="text-sm font-semibold">Distance Traveled (km)</label>
+                    <label htmlFor="distance-slider" className="text-sm font-semibold">Distance Traveled (km)</label>
                     <span className="text-sm font-bold text-emerald-500">{distance} km</span>
                   </div>
                   <input
+                    id="distance-slider"
                     type="range"
                     min="1"
                     max={transportMode === 'flight' ? '3000' : '200'}
@@ -243,11 +244,12 @@ const Calculator: React.FC = () => {
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <Zap className="w-4 h-4 text-amber-500" />
-                    <label className="text-sm font-semibold">Electricity Consumption (kWh)</label>
+                    <label htmlFor="electricity-slider" className="text-sm font-semibold">Electricity Consumption (kWh)</label>
                   </div>
                   <span className="text-sm font-bold text-sky-500">{electricityKwh} kWh</span>
                 </div>
                 <input
+                  id="electricity-slider"
                   type="range"
                   min="0"
                   max="500"
@@ -266,11 +268,12 @@ const Calculator: React.FC = () => {
                 <div className="flex justify-between items-center">
                   <div className="flex items-center gap-2">
                     <Droplet className="w-4 h-4 text-sky-500" />
-                    <label className="text-sm font-semibold">Water Usage (Liters)</label>
+                    <label htmlFor="water-slider" className="text-sm font-semibold">Water Usage (Liters)</label>
                   </div>
                   <span className="text-sm font-bold text-sky-500">{waterLiters} Liters</span>
                 </div>
                 <input
+                  id="water-slider"
                   type="range"
                   min="0"
                   max="1000"
@@ -355,10 +358,11 @@ const Calculator: React.FC = () => {
                 <div className="grid grid-cols-3 gap-3">
                   
                   <div className="space-y-1">
-                    <span className="text-[10px] uppercase font-bold text-slate-400 pl-1">Unsorted (Landfill)</span>
+                    <label htmlFor="waste-unsorted-input" className="text-[10px] uppercase font-bold text-slate-400 pl-1 block">Unsorted (Landfill)</label>
                     <div className="relative">
                       <Trash2 className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                       <input
+                        id="waste-unsorted-input"
                         type="number"
                         min="0"
                         value={wasteWeight}
@@ -369,10 +373,11 @@ const Calculator: React.FC = () => {
                   </div>
 
                   <div className="space-y-1">
-                    <span className="text-[10px] uppercase font-bold text-emerald-400 pl-1">Recycled</span>
+                    <label htmlFor="waste-recycled-input" className="text-[10px] uppercase font-bold text-emerald-400 pl-1 block">Recycled</label>
                     <div className="relative">
                       <Globe className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-emerald-500" />
                       <input
+                        id="waste-recycled-input"
                         type="number"
                         min="0"
                         value={recycledWeight}
@@ -383,10 +388,11 @@ const Calculator: React.FC = () => {
                   </div>
 
                   <div className="space-y-1">
-                    <span className="text-[10px] uppercase font-bold text-amber-500 pl-1">Composted</span>
+                    <label htmlFor="waste-composted-input" className="text-[10px] uppercase font-bold text-amber-500 pl-1 block">Composted</label>
                     <div className="relative">
                       <Utensils className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-amber-500" />
                       <input
+                        id="waste-composted-input"
                         type="number"
                         min="0"
                         value={compostedWeight}
