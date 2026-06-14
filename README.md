@@ -114,24 +114,6 @@ Administrative features:
 
 ---
 
-## 🏗️ System Architecture
-
-User
-↓
-React Frontend
-↓
-Firebase Authentication
-↓
-Firestore Database
-↓
-Business Logic Layer
-↓
-Gemini AI + Google Maps APIs
-↓
-Dashboard & Reports
-
----
-
 ## 🛠️ Technology Stack
 
 ### Frontend
